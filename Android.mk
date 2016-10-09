@@ -157,6 +157,8 @@ LOCAL_ADDITIONAL_DEPENDENCIES := $(busybox_prepare_full)
 LOCAL_CLANG := false
 include $(BUILD_EXECUTABLE)
 
+WITH_BUSYBOX_LINKS ?= true
+
 ifeq ($(WITH_BUSYBOX_LINKS),true)
 
 BUSYBOX_LINKS := $(shell cat $(BB_PATH)/busybox-$(BUSYBOX_CONFIG).links)
